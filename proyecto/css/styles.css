@@ -2,18 +2,34 @@
 #vistaPantalla .col-8{
     background-color: #0d6efd;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;
 }
 
 #vistaPantalla .cuadroInfo{
     background-color: #0d6efd;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 10px;
     padding: 10px;
 }
 
+#vistaPantalla .container{
+    margin-top: 200px;
+}
+
+#vistaPantalla #numeroModulo{
+    font-size: 80px;
+}
+#vistaPantalla .contenedorTipo{
+    font-size: 50px;
+}
+#vistaPantalla #cantidadCola{
+    font-size: 60px;
+}
+#vistaPantalla #cantidadAtendidos{
+    font-size: 60px;
+}
 /*===== GENERAL =====*/
 body {
     margin: 0;
