@@ -11,6 +11,7 @@
 </head>
 
 <body class="bg-light">
+    <!--
     <section id="vistaCliente">
         <div class="container py-5" style="max-width: 500px;">
             <h1 class="text-center mb-4">Toma de Turnos</h1>
@@ -29,13 +30,36 @@
         </div>
         <ul id="listaTareas" class="list-group"></ul>
     </section>
-
+-->
     <section id="vistaPantalla">
 
     </section>
 
 
     <section id="vistaOperador">
+        <h1 class="text-center mb-4">Vista Operador</h1>
+        <div class="container py-5" style="max-width: 500px;">
+            <div class="row text-center mb-4">
+                <div class="col-6">
+                    <div class="cuadroChico">EN COLA</div>
+                    <div id="colaOperador">-</div>
+                </div>
+                <div class="col-6">
+                    <div class="cuadroChico">PERSONAS ATENDIDAS</div>
+                    <div id="atendidosOperador">-</div>
+                </div>
+            </div>
+            <div class="row text-center mb-4">
+                <div class="col-12 cuadroGrande">
+                    <div>ATENDIENDO AHORA</div>
+                    <div id="actualOperador">-</div>
+                    <div>Tipo de Atencion: <span id="tipoAtencionOperador">-</span></div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-success" onclick="siguienteTurno()">Siguiente Turno</button>
+            </div>
+        </div>
 
     </section>
 
