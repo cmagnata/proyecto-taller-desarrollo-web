@@ -14,3 +14,19 @@
     background-color: #f8f9fa;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+#vistaOperador .cuadroChico{
+    font-size: 20px;
+}
+
+#vistaOperador .cuadroGrande{
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 20px;
+    font-size: 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#vistaOperador .container{
+    margin-top: 150px;
+}
+
