@@ -103,41 +103,67 @@
       </div>
     </section>
 
+    <section id="vistaPantalla">
+      <h1 class="text-center mb-4">Pantalla de Turnos</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-8 text-center">
+            <h2>Turno Actual Modulo 1</h2>
+            <div id="numeroModulo">-</div>
+            <div class="contenedorTipo">
+              Tipo de atención: <span id="tipoAtencionPantalla">-</span>
+            </div>
+          </div>
 
-    <section id="vistaOperador">
-        <h1 class="text-center mt-4">Panel de control del operador</h1>
-        <div class="container py-5" style="max-width: 500px;">
-            <div class="row text-center mb-4">
-                <div class="col-6">
-                    <div class="cuadroChico">EN COLA</div>
-                    <div id="colaOperador">-</div>
-                </div>
-                <div class="col-6">
-                    <div class="cuadroChico">PERSONAS ATENDIDAS</div>
-                    <div id="atendidosOperador">-</div>
-                </div>
+          <div class="col-4 text-center">
+            <div class="cuadroInfo">
+              <h2>Turnos en cola</h2>
+              <div id="cantidadCola">-</div>
             </div>
-            <div class="row text-center mb-4">
-                <div class="col-12 cuadroGrande">
-                    <div>
-                        <h2>Atendiendo a:</h2>
-                    </div>
-                    <div id="actualOperador">-</div>
-                    <div>
-                        <h2>Tipo de Atención:</h2>
-                    </div>
-                    <div id="tipoAtencionOperador">-</div>
-                </div>
+            <div class="cuadroInfo">
+              <h2>Personas atendidas</h2>
+              <div id="cantidadAtendidos">-</div>
             </div>
-            <div class="text-center">
-                <button type="button" class="btn btn-success" onclick="siguienteTurno()">Siguiente Turno</button>
-            </div>
+          </div>
         </div>
-
+      </div>
     </section>
 
-    
-    <section id="vistaPantalla" class="d-none">
+    <section id="vistaOperador">
+      <h1 class="text-center mt-4">Panel de control del operador</h1>
+      <div class="container py-5" style="max-width: 500px">
+        <div class="row text-center mb-4">
+          <div class="col-6">
+            <div class="cuadroChico">EN COLA</div>
+            <div id="colaOperador">-</div>
+          </div>
+          <div class="col-6">
+            <div class="cuadroChico">PERSONAS ATENDIDAS</div>
+            <div id="atendidosOperador">-</div>
+          </div>
+        </div>
+        <div class="row text-center mb-4">
+          <div class="col-12 cuadroGrande">
+            <div>
+              <h2>Atendiendo a:</h2>
+            </div>
+            <div id="actualOperador">-</div>
+            <div>
+              <h2>Tipo de Atención:</h2>
+            </div>
+            <div id="tipoAtencionOperador">-</div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button
+            type="button"
+            class="btn btn-success"
+            onclick="siguienteTurno()"
+          >
+            Siguiente Turno
+          </button>
+        </div>
+      </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

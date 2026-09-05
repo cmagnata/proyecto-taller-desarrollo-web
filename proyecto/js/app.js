@@ -14,6 +14,7 @@ const letras = {
     "Pagos": "P"
 };
 
+
 document.getElementById("formularioturno").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -37,8 +38,25 @@ document.getElementById("formularioturno").addEventListener("submit", function(e
     document.getElementById("numeroGenerado").textContent = nuevoTurno.valor;
     document.getElementById("tipoGenerado").textContent = nuevoTurno.tipo_turno;
     document.getElementById("turnoGenerado").classList.remove("d-none");
-
 });
+
+
+
+function actualizarVistaPantalla(){
+    if (turno_actual !== null) {
+        document.getElementById("numeroModulo").textContent = turno_actual.valor;
+        document.getElementById("tipoAtencionPantalla").textContent = turno_actual.tipo_turno;
+    }
+    else {
+        document.getElementById("numeroModulo").textContent = "No hay turnos";
+        document.getElementById("tipoAtencionPantalla").textContent = "No hay turnos";
+    }
+    document.getElementById("cantidadCola").textContent = Fila_turnos.length;
+    document.getElementById("cantidadAtendidos").textContent = personas_atendidas;
+}
+actualizarVistaPantalla();
+
+
 
 function actualizarVistaOperador(){
      if (turno_actual !== null && turno_actual !== undefined) {
@@ -53,7 +71,6 @@ function actualizarVistaOperador(){
     document.getElementById("atendidosOperador").textContent = personas_atendidas;
 }
 
-
 function siguienteTurno(){
     if (Fila_turnos.length !== 0) {
         personas_atendidas = personas_atendidas + 1;
@@ -65,5 +82,17 @@ function siguienteTurno(){
     actualizarVistaPantalla();
     actualizarVistaOperador();
 }
-
 actualizarVistaOperador();
+
+
+
+function mostrarVista(vista) {
+    document.getElementById("vistaCliente").classList.add("d-none");
+    document.getElementById("vistaPantalla").classList.add("d-none");
+    document.getElementById("vistaOperador").classList.add("d-none");
+
+    document.getElementById(vista).classList.remove("d-none");
+
+    actualizarVistaPantalla();
+    actualizarVistaOperador();
+}
