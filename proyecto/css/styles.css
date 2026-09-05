@@ -1,0 +1,16 @@
+#numeroGenerado {
+    font-size: 5rem;
+    font-weight: 800;
+    text-align: center;
+    color: #0d6efd;
+    margin: 20px 0;
+    letter-spacing: 4px;
+}
+
+.ticket-result {
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}

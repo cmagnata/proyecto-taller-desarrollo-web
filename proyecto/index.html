@@ -11,29 +11,49 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
-  <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"> Sistema de Atención </a>
-          <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"> <a class="nav-link" href="#">Obtener número</a> </li>
-              <li class="nav-item"> <a class="nav-link" href="#">Pantalla</a> </li>
-              <li class="nav-item"><a class="nav-link" href="#">Gestión</a></li>
-            </ul>
-          </div>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"> Sistema de Atención </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" onclick="mostrarVista('vistaCliente')"
+                >Obtener número</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="mostrarVista('vistaPantalla')"
+                >Pantalla</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="mostrarVista('vistaOperador')"
+                >Gestión</a
+              >
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
+    <section id="vistaCliente">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
-            <span class="badge hero-badge"> Sistema de Atención </span>
-            <h1 class="hero-title">Obtén tu número de atención</h1>
-            <p class="hero-subtitle"> Selecciona el tipo de atención que necesitas y recibe tu número de turno </p>
+            <span> Sistema de Atención </span>
+            <h1>Obtén tu número de atención</h1>
+            <p>
+              Selecciona el tipo de atención que necesitas y recibe tu número de
+              turno
+            </p>
           </div>
         </div>
 
@@ -42,36 +62,57 @@
             <h2 class="mt-3">Solicitar turno</h2>
             <form id="formularioturno">
               <div class="mb-3">
-                <label for="tipoAtencion" class="form-label">Tipo de atención</label>
+                <label for="tipoAtencion" class="form-label"
+                  >Tipo de atención</label
+                >
                 <select class="form-select" id="tipoAtencion" required>
-                  <option value="" selected disabled> Seleccione una opción</option>
-                  <option value="atencion_general">Atención General</option>
-                  <option value="toma_muestra">Toma de Muestra</option>
-                  <option value="pagos">Pagos</option>
+                  <option value="" selected disabled>
+                    Seleccione una opción
+                  </option>
+                  <option value="Atencion General">Atención General</option>
+                  <option value="Toma de Muestras">Toma de Muestra</option>
+                  <option value="Pagos">Pagos</option>
                 </select>
               </div>
-              <button type="submit" class="btn btn-primary"> Generar número</button>
+              <button id="idpedirturno" type="submit" class="btn btn-primary">
+                Generar número
+              </button>
             </form>
           </div>
         </div>
 
-        <div id="turnoGenerado" class="row justify-content-center mt-4 ">
+        <div id="turnoGenerado" class="row justify-content-center mt-4 d-none">
           <div class="col-md-7 col-lg-5">
             <div class="ticket-result">
               <p class="ticket-label">TU NÚMERO</p>
               <div id="numeroGenerado" class="ticket-number">G001</div>
               <h3 id="tipoGenerado">Atención general</h3>
-              <p>Tu turno ha sido registrado. Por favor espera a que sea llamado.</p>
-              <a href="cola.html" class="btn btn-light mt-2">
-
-
+              <p>
+                Tu turno ha sido registrado. Por favor espera a que sea llamado.
+              </p>
+              <button
+                type="button"
+                class="btn btn-light mt-2"
+                onclick="mostrarVista('vistaPantalla')"
+              >
                 Ver pantalla de atención
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </section>
+
+
+
+
+    
+    <section id="vistaPantalla" class="d-none">
+    </section>
+
+    <section id="vistaOperador" class="d-none">
+    </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
