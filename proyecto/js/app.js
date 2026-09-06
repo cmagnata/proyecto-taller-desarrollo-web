@@ -28,7 +28,6 @@ document.getElementById("formularioturno").addEventListener("submit", function(e
     contadores[tipo]++;
 
     const nuevoTurno = {
-        id: Fila_turnos.length + 1,
         tipo_turno: tipo,
         valor: letras[tipo] + contadores[tipo].toString().padStart(3, "0")
     };

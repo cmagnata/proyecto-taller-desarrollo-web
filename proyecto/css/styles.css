@@ -1,10 +1,3 @@
-/*===== GENERAL =====*/
-body {
-    margin: 0;
-}
-
-
-
 /*===== VISTA USUARIO =====*/
 #numeroGenerado {
     font-size: 5rem;
@@ -15,7 +8,7 @@ body {
     letter-spacing: 4px;
 }
 
-.ticket-result {
+#turnoGenerado {
     text-align: center;
     padding: 30px;
     border-radius: 15px;
@@ -75,6 +68,6 @@ body {
 
 #vistaOperador .container{
     margin-top: 150px;
+    max-width: 500px;
+
 }
-
-

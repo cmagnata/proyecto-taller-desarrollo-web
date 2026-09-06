@@ -25,18 +25,20 @@
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" onclick="mostrarVista('vistaCliente')"
-                >Obtener número</a
-              >
+              <button class="nav-link" onclick="mostrarVista('vistaCliente')">
+                Obtener número</button
+              >>
+            </li>
+
+            <li class="nav-item">
+              <button class="nav-link" onclick="mostrarVista('vistaPantalla')">
+                Pantalla
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="mostrarVista('vistaPantalla')"
-                >Pantalla</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" onclick="mostrarVista('vistaOperador')"
-                >Gestión</a
+              <button class="nav-link" onclick="mostrarVista('vistaOperador')">
+                Gestión
+              </button>
               >
             </li>
           </ul>
@@ -45,65 +47,41 @@
     </nav>
 
     <section id="vistaCliente">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <span> Sistema de Atención </span>
-            <h1>Obtén tu número de atención</h1>
-            <p>
-              Selecciona el tipo de atención que necesitas y recibe tu número de
-              turno
-            </p>
-          </div>
-        </div>
+      <h1 class="text-center mt-4">Solicitar turno</h1>
+      <div class="container py-5 text-center">
+        <p>Selecciona el tipo de atención que necesitas</p>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <h2 class="mt-3">Solicitar turno</h2>
-            <form id="formularioturno">
-              <div class="mb-3">
-                <label for="tipoAtencion" class="form-label"
-                  >Tipo de atención</label
-                >
-                <select class="form-select" id="tipoAtencion" required>
-                  <option value="" selected disabled>
-                    Seleccione una opción
-                  </option>
-                  <option value="Atencion General">Atención General</option>
-                  <option value="Toma de Muestras">Toma de Muestra</option>
-                  <option value="Pagos">Pagos</option>
-                </select>
-              </div>
-              <button id="idpedirturno" type="submit" class="btn btn-primary">
-                Generar número
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <div id="turnoGenerado" class="row justify-content-center mt-4 d-none">
-          <div class="col-md-7 col-lg-5">
-            <div class="ticket-result">
-              <p class="ticket-label">TU NÚMERO</p>
-              <div id="numeroGenerado" class="ticket-number">G001</div>
-              <h3 id="tipoGenerado">Atención general</h3>
-              <p>
-                Tu turno ha sido registrado. Por favor espera a que sea llamado.
-              </p>
-              <button
-                type="button"
-                class="btn btn-light mt-2"
-                onclick="mostrarVista('vistaPantalla')"
-              >
-                Ver pantalla de atención
-              </button>
-            </div>
-          </div>
+        <form id="formularioturno">
+          <h2>Tipo de atención</h2>
+          <select id="tipoAtencion" class="form-select mb-3" required>
+            <option value="" selected disabled>Seleccione una opción</option>
+            <option value="Atencion General">Atención General</option>
+            <option value="Toma de Muestras">Toma de Muestras</option>
+            <option value="Pagos">Pagos</option>
+          </select>
+          <button type="submit" class="btn btn-primary btn-lg">
+            Generar número
+          </button>
+        </form>
+        <div id="turnoGenerado" class="mt-4 d-none">
+          <h2>Tu número</h2>
+          <div id="numeroGenerado"></div>
+          <h3 id="tipoGenerado"></h3>
+          <p>
+            Tu turno ha sido registrado. Por favor espera a que sea llamado.
+          </p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="mostrarVista('vistaPantalla')"
+          >
+            Ver pantalla de atención
+          </button>
         </div>
       </div>
     </section>
 
-    <section id="vistaPantalla">
+    <section id="vistaPantalla" class="d-none">
       <h1 class="text-center mb-4">Pantalla de Turnos</h1>
       <div class="container">
         <div class="row">
@@ -129,9 +107,9 @@
       </div>
     </section>
 
-    <section id="vistaOperador">
+    <section id="vistaOperador" class="d-none">
       <h1 class="text-center mt-4">Panel de control del operador</h1>
-      <div class="container py-5" style="max-width: 500px">
+      <div class="container py-5">
         <div class="row text-center mb-4">
           <div class="col-6">
             <div class="cuadroChico">EN COLA</div>
