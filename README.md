@@ -25,6 +25,7 @@ Llamar al siguiente turno desde el panel del operador.
 Navegar entre las diferentes vistas del sistema.
 
 ## Estructura del proyecto
+```text
 proyecto/
 ├── index.html
 ├── css/
@@ -32,6 +33,7 @@ proyecto/
 ├── js/
 │   └── app.js
 └── README.md
+```
 
 ## Instrucciones
 - Descargar el repositorio
