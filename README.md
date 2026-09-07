@@ -16,8 +16,26 @@ Una organización con gran flujo de personas requiere ordenar el proceso de toma
 - Bootstrap
 - JavaScript
 
+## Funcionalidades
+Solicitar un nuevo turno según tipo de atención y generar turno.
+Diferenciar los turnos mediante letras.
+Visualizar el turno actual y tipo de atención.
+Mostrar la cantidad de personas en espera y personas atendidas.
+Llamar al siguiente turno desde el panel del operador.
+Navegar entre las diferentes vistas del sistema.
+
+## Estructura del proyecto
+proyecto/
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── app.js
+└── README.md
+
 ## Instrucciones
 - Descargar el repositorio
 - Abrir el archivo "index.html" en un navegador
 - El sistema cuenta con 3 vistas: Solicitud de turnos, Pantalla pública de espera y panel del operador 
 - Usar los botones de navegación para desplazarse entre las vistas 
+
